@@ -5,11 +5,6 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
-
 let who = ["The dog", "My grandma", "His turtle", "My bird"];
 let action = ["ate", "peed", "crushed", "broke"];
 let what = ["my homework", "the keys", "the car"];
@@ -27,10 +22,11 @@ function generateExcuse() {
   let randomWhat = what[Math.floor(Math.random() * what.length)];
   let randomWhen = when[Math.floor(Math.random() * when.length)];
 
-  return;
+  return randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
 }
 
 window.onload = function() {
+  //write your code here
   let excuse = generateExcuse();
-  document.getElementById("excuse").innerHTML = excuse;
+  document.querySelector("#excuse").innerHTML = excuse;
 };
