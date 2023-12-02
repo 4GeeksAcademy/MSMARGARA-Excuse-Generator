@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -22,11 +21,12 @@ function generateExcuse() {
   let randomWhat = what[Math.floor(Math.random() * what.length)];
   let randomWhen = when[Math.floor(Math.random() * when.length)];
 
-  return randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
+  let concatenatedString = randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
+  
+  return concatenatedString;
 }
 
 window.onload = function() {
-  //write your code here
   let excuse = generateExcuse();
   document.querySelector("#excuse").innerHTML = excuse;
 };
